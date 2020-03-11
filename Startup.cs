@@ -18,7 +18,8 @@ namespace MVCKeycloak_Example
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
-                AuthenticationType = persistentAuthType
+                AuthenticationType = persistentAuthType,
+                
             });
             app.SetDefaultSignInAsAuthenticationType(persistentAuthType);
 

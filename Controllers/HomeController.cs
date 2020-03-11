@@ -24,11 +24,14 @@ namespace MVCKeycloak_Example.Controllers
             return View(userPrinciple);
         }
 
-        [Authorize(Roles = "admin")]
+        [Authorize]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
+            var userPrinciple = User as ClaimsPrincipal;
+            if (userPrinciple.HasClaim(c => c.Type == "MyCustomClaim"))
+                ViewBag.Message = "My Custom Claim is '" + userPrinciple.Claims.Single(c => c.Type == "MyCustomClaim").Value + "'";
+            else
+                ViewBag.Message = "My Custom Claim is missing D:";
             return View();
         }
     }
