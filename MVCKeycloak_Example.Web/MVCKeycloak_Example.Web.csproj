@@ -285,12 +285,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Owin.Security.Keycloak\src\Owin.Security.Keycloak\Owin.Security.Keycloak.csproj">
-      <Project>{16edd97e-727a-4366-bf79-629295a162d1}</Project>
-      <Name>Owin.Security.Keycloak</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
