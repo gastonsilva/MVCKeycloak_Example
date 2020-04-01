@@ -230,11 +230,11 @@ namespace Owin.Security.Keycloak.Middleware
             string reasonPhrase, string errorMessage)
         {
             // Generate error response
-            var task = response.WriteAsync(errorMessage);
+            //var task = response.WriteAsync(errorMessage);
             response.StatusCode = (int) statusCode;
-            response.ReasonPhrase = reasonPhrase;
-            response.ContentType = "text/plain";
-            await task;
+            //response.ReasonPhrase = reasonPhrase;
+            //response.ContentType = "text/plain";*/
+            //await task;
         }
 
         /// <summary>

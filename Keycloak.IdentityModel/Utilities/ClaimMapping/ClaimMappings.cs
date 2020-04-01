@@ -67,9 +67,15 @@ namespace Keycloak.IdentityModel.Utilities.ClaimMapping
             // Example
             new ClaimLookup
             {
-                ClaimName = "MyCustomClaim",
-                JSelectQuery = "MyCustomClaim"
+                ClaimName = "custom1",
+                JSelectQuery = "custom1"
+            },
+            new ClaimLookup
+            {
+                ClaimName = "custom2",
+                JSelectQuery = "custom2"
             }
+
         };
 
         public static IEnumerable<ClaimLookup> IdTokenMappings { get; } = new List<ClaimLookup>();
